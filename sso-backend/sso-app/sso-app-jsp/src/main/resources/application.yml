@@ -1,0 +1,22 @@
+server:
+  port: 8088
+
+spring:
+  thymeleaf:
+    encoding: utf-8
+    prefix: classpath:/templates/
+    suffix: .html
+
+sso:
+  name: "clientContainer"
+  server:
+    login-url: http://sso.auth.com:8080
+    sso-server-url: http://center.sso.auth.com:8081
+  client:
+    id: 1003
+    secret: 7da6db3e6fa5e660dcebc01cc9849dd8
+  h5-enabled: false
+  url-patterns: ["/*"]
+  exclude-urls: ['/doc.html',"/v2/api-docs","/webjars/css/*","/webjars/js/*","/swagger-resources/*","/swagger-ui.html"]
+  logout-path: "/logout"
+  token-name-prefix: "sso-oauth2-token-"

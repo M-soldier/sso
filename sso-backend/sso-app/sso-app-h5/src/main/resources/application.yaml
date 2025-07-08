@@ -1,0 +1,14 @@
+sso:
+   name: "clientContainer"
+   server:
+       login-url: http:sso.authentication.com:8080
+       app-server-url: http:client.xiaomiao.com:8082
+       sso-server-url: http:sso.authentication.com:8081
+   client:
+       id: 6047682481
+       secret: c9f94c2e215d4371b970723a4a8de007
+   h5-enabled: true
+   url-patterns: ["/*"]
+   exclude-urls: ["/v2"]
+   logout-path: "/logout"
+   token-name-prefix: "sso-oauth2-token-"

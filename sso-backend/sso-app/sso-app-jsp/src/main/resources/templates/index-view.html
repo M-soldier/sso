@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>sso-client</title>
+</head>
+<body>
+    <h2>sso-client-B</h2>
+    <b>欢迎登录客户端系统！！！！！</b>
+    <br/><br/>
+
+    <b>登录信息:</b><br/>
+    <b>用户名：<span th:text="${userName}">[用户名]</span></b><br/>
+    <b>sessionId：<span th:text="${sessionId}">[sessionId]</span></b><br/>
+
+    <a th:href="${logoutUrl}">
+        <span style="color: darkgreen">退出单点登录</span>
+    </a>
+</body>
+
+</html>
